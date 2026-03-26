@@ -1,130 +1,345 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./CSS/style.css">
-<title>Gioia Travaglini | Developer</title>
+<title>Gioia Travaglini | Full Stack Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./CSS/style.css">
 </head>
-
 <body>
-
+ 
+<div id="cursor"></div>
+ 
+<!-- ═══ HEADER ═══ -->
 <header>
-    <canvas id="matrix"></canvas>
-<h1>Gioia Travaglini</h1>
-<p>Junior Developer</p>
+  <a href="#" class="logo">gioia.dev</a>
+  <nav>
+    <a href="mailto:gioia.travaglini18@gmail.com" class="nav-email">gioia.travaglini18@gmail.com</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Progetti</a>
+    <a href="#contact">Contatti</a>
+  </nav>
 </header>
+ 
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+ 
+    <div class="hero-text reveal">
+      <div class="hero-tag">✦ Open to work · San Benedetto del Tronto</div>
+      <h1 class="hero-title">
+        Ciao,<br>
+        sono<br>
+        <em>Gioia</em>
+      </h1>
+      <p class="hero-desc">
+        Junior Full Stack Web Developer. Costruisco applicazioni web
+        complete, dal backend Java/Spring Boot alle interfacce moderne.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="hero-cta">Guarda i miei lavori <span>→</span></a>
+        <a href="https://github.com/Baldanz00" target="_blank" class="hero-cta-ghost">GitHub ↗</a>
+      </div>
+    </div>
+ 
+    <!-- AVATAR: capelli biondo cenere, occhiali neri, MacBook grigio scuro, felpa + jeans -->
+<!-- AVATAR ANIMATO MIGLIORATO -->
+<div class="avatar-wrap reveal">
+  <div class="avatar-glow"></div>
 
-<nav>
-<a href="#about">Chi sono</a>
-<a href="#skills">Competenze</a>
-<a href="#projects">Progetti</a>
-<a href="#contact">Contatti</a>
-</nav>
+  <div class="avatar-3d">
+    <svg viewBox="0 0 340 460" xmlns="http://www.w3.org/2000/svg">
 
-<section id="about">
-<h2>Chi sono</h2>
-<p>
-Sono una Junior Web Developer appassionata di tecnologia e programmazione. 
-Lavoro con linguaggi come Java, Python e Rust e utilizzo Spring Boot per sviluppare applicazioni 
-backend moderne e scalabili. Ho realizzato diversi progetti completi integrando anche tecnologie web 
-come HTML, CSS e JavaScript per creare interfacce moderne e funzionali. Mi piace costruire applicazioni 
-ben strutturate, performanti e curate sia dal punto di vista tecnico che dell’esperienza utente. 
-Sono sempre alla ricerca di nuove tecnologie e sfide per migliorare continuamente le mie competenze.
+  <defs>
+    <radialGradient id="skin" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#f6d7c3"/>
+      <stop offset="100%" stop-color="#d9a98b"/>
+    </radialGradient>
 
-</p>
+    <radialGradient id="hair" cx="50%" cy="20%">
+      <stop offset="0%" stop-color="#d2a679"/>
+      <stop offset="100%" stop-color="#6b4b34"/>
+    </radialGradient>
+
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- TESTA CON OMBRA -->
+  <g filter="url(#shadow)">
+    <circle cx="170" cy="170" r="85" fill="url(#skin)"/>
+  </g>
+
+  <!-- CAPELLI (MORBIDI, NON CASCO) -->
+  <path d="M85 150 
+           Q85 60 170 35 
+           Q255 60 255 150 
+           Q230 115 170 120 
+           Q110 115 85 150Z"
+        fill="url(#hair)"/>
+
+  <!-- FRANGIA PIÙ REALISTICA -->
+  <path d="M120 95 
+           Q145 75 170 75 
+           Q195 75 220 95 
+           Q195 105 170 100 
+           Q145 105 120 95Z"
+        fill="#a67c5b"/>
+
+  <!-- OCCHIALI LEGGERI -->
+  <g stroke="#888" stroke-width="1.5" fill="rgba(255,255,255,0.1)">
+    <rect x="110" y="165" width="50" height="32" rx="12"/>
+    <rect x="180" y="165" width="50" height="32" rx="12"/>
+  </g>
+
+  <!-- OCCHI -->
+  <circle cx="135" cy="182" r="10" fill="white"/>
+  <circle cx="205" cy="182" r="10" fill="white"/>
+
+  <!-- IRIDI VERDI -->
+  <circle cx="135" cy="182" r="5" fill="#4f8f5f"/>
+  <circle cx="205" cy="182" r="5" fill="#4f8f5f"/>
+
+  <!-- PUPILLE -->
+  <circle class="pupil" cx="134" cy="182" r="3" fill="#000" data-cx="134" data-cy="182"/>
+<circle class="pupil" cx="210" cy="182" r="3" fill="#000" data-cx="210" data-cy="182"/>
+
+  <!-- BLINK PIÙ NATURALE -->
+  <rect x="125" y="180" width="20" height="2" fill="#333">
+    <animate attributeName="height" values="2;14;2" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="195" y="180" width="20" height="2" fill="#333">
+    <animate attributeName="height" values="2;14;2" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- GUANCE -->
+  <ellipse cx="115" cy="210" rx="15" ry="8" fill="rgba(255,120,120,0.2)"/>
+  <ellipse cx="225" cy="210" rx="15" ry="8" fill="rgba(255,120,120,0.2)"/>
+
+  <!-- BOCCA -->
+  <path d="M145 235 Q170 250 195 235"
+        stroke="#b07a5a" stroke-width="2" fill="none"/>
+
+  <!-- CORPO MIGLIORATO -->
+  <path d="M60 300 
+           Q170 260 280 300 
+           L300 420 
+           L40 420 Z"
+        fill="#1a1a1a"/>
+
+  <!-- RESPIRO -->
+  <animateTransform attributeName="transform"
+    type="translate"
+    values="0 0; 0 -4; 0 0"
+    dur="4s"
+    repeatCount="indefinite"/>
+
+</svg>
+  </div>
+</div>
+ 
+  </div>
 </section>
-
-<section id="skills">
-<h2>Competenze</h2>
-
-<div class="skills-grid">
-
-<div class="card">Java</div>
-<div class="card">Python</div>
-<div class="card">JavaScript</div>
-<div class="card">HTML</div>
-<div class="card">CSS</div>
-<div class="card">Rust</div>
-<div class="card">Spring Boot</div>
-<div class="card">Maven</div>
-
+ 
+<!-- ═══ ABOUT ═══ -->
+<div id="about">
+  <div class="about-left reveal">
+    <span class="section-label">About me</span>
+    <h2>Chi<br>sono</h2>
+  </div>
+  <div class="about-right reveal">
+    <p>
+      Sono una <strong>Junior Full Stack Web Developer</strong> con attestato in Full Stack Web Development
+      conseguito presso <strong>Boolean</strong>. Competenze nello sviluppo di applicazioni web
+      frontend e backend con HTML, CSS, JavaScript, Java, Spring Boot e MySQL.
+    </p>
+    <p>
+      Ho esperienza nello sviluppo di <strong>progetti pratici completi</strong>, utilizzo di Git/GitHub
+      e forte motivazione alla crescita professionale in team strutturati.
+    </p>
+    <p>
+      Provengo da esperienze lavorative nel <strong>problem solving operativo</strong> e nella gestione,
+      che mi hanno trasmesso organizzazione, comunicazione e capacità di lavorare sotto pressione.
+    </p>
+  </div>
 </div>
-
-</section>
-
-<section id="projects">
-
-<h2>Progetti</h2>
-
-<div class="projects">
-
-<div class="project-card">
-<h3>Dashboard Gestione ticket</h3>
-<p>Programma Java che gestisce un sistema di ticket per un servizio clienti.</p>
-<a href="https://github.com/Baldanz00/ticket-platform" target="_blank">
-Vedi su GitHub
-</a>
-<a href="https://github.com/Baldanz00/ticket-platform" target="_blank" class="repo-btn">
-💻 Vedi codice
-</a>
+ 
+<!-- ═══ SKILLS ═══ -->
+<div id="skills">
+  <div class="what-header reveal">
+    <div class="what-title">Le mie<br><b>Skills</b></div>
+  </div>
+  <div class="services-grid">
+ 
+    <div class="service-card reveal">
+      <div class="service-num">Frontend</div>
+      <div class="service-name">HTML5 · CSS3</div>
+      <p class="service-desc">Strutture semantiche, responsive design e layout moderni con Flexbox e Grid.</p>
+    </div>
+ 
+    <div class="service-card reveal">
+      <div class="service-num">Interattività</div>
+      <div class="service-name">JavaScript</div>
+      <p class="service-desc">DOM manipulation, logica client-side e integrazione con REST API.</p>
+    </div>
+ 
+    <div class="service-card reveal">
+      <div class="service-num">Backend</div>
+      <div class="service-name">Java · Spring Boot</div>
+      <p class="service-desc">Architettura MVC, REST API, Spring Security e gestione dipendenze Maven.</p>
+    </div>
+ 
+    <div class="service-card reveal">
+      <div class="service-num">Database</div>
+      <div class="service-name">MySQL</div>
+      <p class="service-desc">Schemi relazionali, operazioni CRUD e query con MySQL Workbench.</p>
+    </div>
+ 
+    <div class="service-card reveal">
+      <div class="service-num">Versionamento</div>
+      <div class="service-name">Git · GitHub</div>
+      <p class="service-desc">Flussi di lavoro con branch, commit e repository pubblici su GitHub.</p>
+    </div>
+ 
+    <div class="service-card reveal">
+      <div class="service-num">Tools</div>
+      <div class="service-name">VS Code · IntelliJ</div>
+      <p class="service-desc">Ambienti di sviluppo quotidiani per progetti frontend e backend Java.</p>
+    </div>
+ 
+  </div>
 </div>
-
-<div class="project-card">
-<h3>Password Validator</h3>
-<p>Script Python che controlla la sicurezza delle password.</p>
-<a href="https://github.com/Baldanz00/password_validator.git" target="_blank">
-Vedi su GitHub
-</a>
-<a href="https://github.com/Baldanz00/password_validator.git" target="_blank" class="repo-btn">
-💻 Vedi codice
-</a>
+ 
+<!-- ═══ PROJECTS ═══ -->
+<div id="projects">
+  <div class="work-header reveal">
+    <h2 class="work-title">My Work</h2>
+  </div>
+  <div class="work-grid">
+ 
+    <div class="work-card reveal">
+      <a href="https://github.com/Baldanz00/ticket-platform" target="_blank" class="work-arrow">↗</a>
+      <div class="work-card-img work-card-java">
+        <span class="work-card-stack">Java · Spring Boot · MySQL</span>
+      </div>
+      <div class="work-card-name">Ticket Platform</div>
+      <div class="work-card-tag">Full Stack · Web App · Boolean</div>
+      <p class="work-card-desc">Applicazione full stack con Spring Boot, Spring Security e MySQL. Dashboard per Admin e Operatore, autenticazione basata su ruoli e simulazione sistema help desk.</p>
+    </div>
+ 
+    <div class="work-card reveal">
+      <a href="https://github.com/Baldanz00/password_validator" target="_blank" class="work-arrow">↗</a>
+      <div class="work-card-img work-card-python">
+        <span class="work-card-stack">Python</span>
+      </div>
+      <div class="work-card-name">Password Validator</div>
+      <div class="work-card-tag">Python · Security · Script</div>
+      <p class="work-card-desc">Script Python che valuta la sicurezza delle password analizzando lunghezza, caratteri speciali, numeri e maiuscole con punteggio di robustezza.</p>
+    </div>
+ 
+    <div class="work-card reveal">
+      <a href="https://github.com/Baldanz00/boolean-learning-path" target="_blank" class="work-arrow">↗</a>
+      <div class="work-card-img work-card-web">
+        <span class="work-card-stack">HTML · CSS · JS</span>
+      </div>
+      <div class="work-card-name">Boolean Learning Path</div>
+      <div class="work-card-tag">Frontend · Web · Interattivo</div>
+      <p class="work-card-desc">Percorso di apprendimento interattivo per sviluppatori con interfaccia moderna e tracciamento degli step completati.</p>
+    </div>
+ 
+    <div class="work-card work-card--more reveal">
+      <div class="work-card-img work-card-more">
+        <span class="work-card-stack">github.com/Baldanz00</span>
+      </div>
+      <div class="work-card-name">Tutti i progetti</div>
+      <div class="work-card-tag">Repository · GitHub pubblici</div>
+      <p class="work-card-desc">Esplora tutti i repository pubblici: esercizi, progetti Boolean e sperimentazioni personali.</p>
+      <a href="https://github.com/Baldanz00" target="_blank" class="work-card-cta">Vai al profilo GitHub ↗</a>
+    </div>
+ 
+  </div>
 </div>
-
-<div class="project-card">
-<h3>Learning path</h3>
-<p>Percorso di apprendimento interattivo per sviluppatori.</p>
-<a href="https://github.com/Baldanz00/boolean-learning-path.git" target="_blank">
-Vedi su GitHub
-</a>
-<a href="https://github.com/Baldanz00/boolean-learning-path.git" target="_blank" class="repo-btn">
-💻 Vedi codice
-</a>
+ 
+<!-- ═══ EXPERIENCE ═══ -->
+<div id="experience">
+  <h2 class="exp-title reveal">Percorso</h2>
+  <div class="timeline">
+ 
+    <div class="timeline-item">
+      <div class="tl-year">2025</div>
+      <div class="tl-line"><div class="tl-dot"></div></div>
+      <div class="tl-content reveal">
+        <div class="tl-role">Full Stack Web Development</div>
+        <div class="tl-company">Boolean · Attestato conseguito</div>
+        <p class="tl-desc">Corso intensivo: HTML, CSS, JavaScript, Java, Spring Boot, MySQL, REST API, Git/GitHub. Sviluppo di progetti pratici completi in ambiente collaborativo.</p>
+      </div>
+    </div>
+ 
+    <div class="timeline-item">
+      <div class="tl-year">2024</div>
+      <div class="tl-line"><div class="tl-dot"></div></div>
+      <div class="tl-content reveal">
+        <div class="tl-role">Segretaria / Front Office</div>
+        <div class="tl-company">Consorzio Blu · Faenza (RA)</div>
+        <p class="tl-desc">Gestione documentazione, utilizzo gestionale Arxivar, analisi software interni e collaborazione diretta con il team ICT.</p>
+      </div>
+    </div>
+ 
+    <div class="timeline-item">
+      <div class="tl-year">2023</div>
+      <div class="tl-line"><div class="tl-dot"></div></div>
+      <div class="tl-content reveal">
+        <div class="tl-role">Store Manager</div>
+        <div class="tl-company">Machete Barber Shop · Roma</div>
+        <p class="tl-desc">Gestione operativa, problem solving quotidiano e utilizzo di software gestionali. Leadership e organizzazione del team di lavoro.</p>
+      </div>
+    </div>
+ 
+    <div class="timeline-item">
+      <div class="tl-year">NOW</div>
+      <div class="tl-line"><div class="tl-dot tl-dot--now"></div></div>
+      <div class="tl-content reveal">
+        <div class="tl-role">Junior Developer · Open to work</div>
+        <div class="tl-company">Freelance & Upskilling · San Benedetto del Tronto</div>
+        <p class="tl-desc">Sviluppo di progetti personali, approfondimento delle tecnologie backend e ricerca attiva di opportunità in team strutturati.</p>
+      </div>
+    </div>
+ 
+  </div>
 </div>
-</a>
+ 
+<!-- ═══ CONTACT ═══ -->
+<div id="contact">
+  <p class="contact-pre reveal">Parliamoci</p>
+  <h2 class="contact-title reveal">
+    Lavoriamo<br>
+    <em>Insieme</em>
+  </h2>
+  <div class="contact-links reveal">
+    <a href="mailto:gioia.travaglini18@gmail.com" class="contact-email">
+      gioia.travaglini18@gmail.com
+    </a>
+    <div class="contact-socials">
+      <a href="https://github.com/Baldanz00" target="_blank" class="contact-social-btn">GitHub ↗</a>
+      <a href="https://linkedin.com/in/gioia-travaglini-272541181" target="_blank" class="contact-social-btn">LinkedIn ↗</a>
+      <a href="tel:+393513270710" class="contact-social-btn">351 327 0710</a>
+    </div>
+  </div>
 </div>
-
-</div><div class="github-section">
-
-<a href="https://github.com/Baldanz00" target="_blank" class="github-btn">
-🚀 Per altri progetti visita il mio GitHub
-</a>
-
-</div></section>
-
-<section id="contact">
-
-<h2>Contatti</h2>
-
-<p>Email: gioia.travaglini18@email.com</p>
-
-<p>
-GitHub:
-<a href="https://github.com/Baldanz00" target="_blank">
-github.com/Baldanz00
-</a></p>
-
-</section>
-
+ 
+<!-- ═══ FOOTER ═══ -->
 <footer>
-
-<p>© 2026 Gioia Travaglini</p>
-
+  <span class="footer-copy">© 2026 Gioia Travaglini · San Benedetto del Tronto</span>
+  <a href="#" class="footer-logo">gioia.dev</a>
 </footer>
+ 
 <script src="./JS/script.js"></script>
 </body>
 </html>
